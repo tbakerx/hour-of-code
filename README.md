@@ -1,6 +1,6 @@
 # Hour of Code
 
-![Login-Screenshot](screenshot.png?raw=true "Login Page Screenshot")
+![Login-Screenshot](screenshot.png?raw=true "Login Page Screenshot" | height=450)
 
 This is a React Native mobile app for developers to commit to coding for at least an hour a day.
 
