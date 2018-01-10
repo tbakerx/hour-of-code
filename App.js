@@ -12,7 +12,7 @@ export default class App extends Component<{}> {
     return (
       <View style={styles.container}>
         <Route />
-        <StatusBar backgroundColor='#45b542' barStyle='light-content' />
+        <StatusBar backgroundColor='#4b4b4b' barStyle='light-content' />
       </View>
     );
   }
