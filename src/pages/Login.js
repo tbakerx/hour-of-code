@@ -4,13 +4,21 @@ import {
   Text,
   Image,
   StatusBar,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native';
-import LoginForm from '../components/LoginForm.js'
-import Logo from '../components/Logo.js'
 
+import LoginForm from '../components/LoginForm.js';
+import Logo from '../components/Logo.js';
+
+import {Actions} from 'react-native-router-flux';
 
 export default class Login extends Component<{}> {
+
+  signUp(){
+    Actions.signup()
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -18,7 +26,7 @@ export default class Login extends Component<{}> {
             <LoginForm type="Login"/>
             <View style={styles.signUpTextContainer}>
               <Text style={styles.signUpText}>Don't have an account? </Text>
-              <Text style={styles.signUpButton}>Sign Up</Text>
+              <TouchableOpacity onPress={this.signUp}><Text style={styles.signUpButton}>Sign Up</Text></TouchableOpacity>
             </View>
       </View>
     );
@@ -37,7 +45,6 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    marginVertical: 16,
     flexDirection: 'row'
   },
   signUpText: {

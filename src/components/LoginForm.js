@@ -15,6 +15,9 @@ function onButtonPress(){
 }
 
 export default class LoginForm extends Component<{}> {
+
+
+
   render() {
     return (
       <View style={styles.container}>
@@ -22,6 +25,7 @@ export default class LoginForm extends Component<{}> {
                     autoCapitalize="none"
                     onSubmitEditing={() => this.passwordInput.focus()}
                     autoCorrect={false}
+                    selectionColor='#fff'
                     keyboardType='email-address'
                     returnKeyType='next'
                     placeholder='Enter your email'
@@ -32,11 +36,12 @@ export default class LoginForm extends Component<{}> {
                     ref={(input) => this.passwordInput = input}
                     placeholder='Enter your Password'
                     placeholderTextColor='rgba(225,225,225,0.9)'
+                    selectionColor='#fff'
                     secureTextEntry
                     underlineColorAndroid='rgba(0,0,0,0)'/>
         <TouchableOpacity style={styles.buttonContainer}
                             onPress={onButtonPress}>
-              <Text style={styles.buttonText}>LOGIN NOW</Text>
+              <Text style={styles.buttonText}>{this.props.type} Now</Text>
         </TouchableOpacity>
 
 
